@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KinderKids - The Adventure Parrot</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon2.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            <!-- insert your styling here -->
+            
+        div.second2 h1{
+           text-align: center;
+        } 
+        
+        .second2{
+              background-color: black;
+
+        }
+        .glow {
+            font-size: 80px;
+            color: #fffcd0;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            font-family: cursive;
+        }
+
+          @-webkit-keyframes glow {
+            from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+              text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+          }
+        
+          div.thirdbox p{
+              text-align:center;
+              
+          }
+          
+          .w3-round-xxlarge{
+              background-color: #ffc0cb;
+          }
+          .typewriter h1 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+          }
+
+            /*Typing Effect*/
+            @-webkit-keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @-webkit-keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: orange; }
+            }/* The typing effect */
+            @-webkit-keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @-webkit-keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: orange; }
+            }
+
+         
+            
+            
+            
+            
+        #ichizoku{width:65%;margin:auto;}
+        .ninja {
+            width: 180px;
+            height: 200px;
+            position: relative;
+            margin: 100px 10px;
+            float: left;
+        }
+        .ninja .n--head {
+            width: 140px;
+            height: 140px;
+            background: #000;
+            /*border-radius*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            margin: -70px auto;
+            overflow: hidden;
+        }
+        /* Eyes */
+        .ninja .n--head .n--eyes {
+            display: block;
+            width: 300px;
+            height: 300px;
+            background: #000;
+            border: 40px solid #f0d4a6;
+            /*border-radius*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            margin: 35% -85%;
+        }
+        .ninja .n--head .n--eyes:before {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 120px;
+            background: transparent;
+            border: 10px solid #000;
+            position: absolute;
+            margin: -49% 44%;
+            /*border-radius*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+        }
+        .ninja .n--head .n--eyes:after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            position: absolute;
+            margin: -14% 60%;
+            /*border-radius*/
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            /*box-shadow*/
+            -webkit-box-shadow: 62px 0px 0;
+            -moz-box-shadow: 62px 0px 0;
+            box-shadow: 62px 0px 0;
+        }
+        .ninja .n--head .n--ribbon {
+            position: absolute;
+            width: 10px;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 40px solid #000;
+            margin: -10px 105px;
+            /*transform*/
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .ninja .n--head .n--ribbon:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            /*border-radius*/
+            -webkit-border-radius: 20000000%;
+            -moz-border-radius: 20000000%;
+            border-radius: 20000000%;
+            margin: -60px -10px;
+        }
+        .ninja .n--body {
+            width: 64%;
+            height: 50%;
+            background: #000;
+            margin: 60px auto;
+        }
+        .ninja .n--body:after {
+            content: '';
+            display: block;
+            background: #333;
+            width: 100%;
+            height: 10px;
+            margin-top: 60%;
+            z-index: 1;
+            position: relative;
+        }
+        .ninja .n--body .n--weapon {
+            width: 130px;
+            height: 10px;
+            /*border-radius*/
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            z-index: -1;
+            /*transform*/
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            border: 1px solid #ccc;
+            margin: auto -32%;
+        }
+        .ninja .n--arm {
+            width: 50%;
+            height: 55%;
+            background: #000;
+            /*border-radius*/
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+        }
+        .ninja .n--arm:nth-child(2) { margin: 0 -25% }
+        .ninja .n--arm:nth-child(3) { margin: -48% 75% }
+        .ninja .n--leg {
+            width: 45%;
+            height: 75%;
+            float: left;
+            background: #000;
+            /*border-radius*/
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            margin-top: 60px;
+        }
+        .ninja .n--body .n--leg:nth-child(4) { margin-left: 0px }
+        .ninja .n--body .n--leg:nth-child(5) { margin-left: 10% }
+        /* Color the ninja */
+        .ninja.red .n--weapon {
+            background: #e74c3c;
+            border-color: #c0392b;
+        }
+        .ninja.red .n--body:after { background: #e74c3c }
+        .ninja.blue .n--weapon {
+            background: #3498db;
+            border-color: #2980b9;
+        }
+        .ninja.blue .n--body:after { background: #3498db }
+        .ninja.green .n--weapon {
+            background: #2ecc71;
+            border-color: #27ae60;
+        }
+        .ninja.green .n--body:after { background: #2ecc71 }
+        .ninja.yellow .n--weapon {
+            background: #f1c40f;
+            border-color: #f39c12;
+        }
+        .ninja.yellow .n--body:after { background: #f1c40f }
+        
+        
+        
+        
+        
+        
+        
+        .Mycard {
+		  color: #999999;
+		  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		  font-style: normal;
+		  font-weight: 400;
+		  letter-spacing: 0;
+		  padding: 1rem;
+		  text-rendering: optimizeLegibility;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  -moz-font-feature-settings: "liga" on;
+		  text-align: justify;
+		}
+		img {
+		  height: auto;
+		  max-width: 100%;
+		  vertical-align: middle;
+		}
+		.cards {
+		  display: flex;
+		  flex-wrap: wrap;
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+		.cards__item {
+		  display: flex;
+		  padding: 1rem;
+		}
+		@media (min-width: 40rem) {
+		  .cards__item {
+			width: 50%;
+		  }
+		}
+		@media (min-width: 56rem) {
+		  .cards__item {
+			width: 33.3333%;
+		  }
+		}
+		.card {
+		  background-color: white;
+		  border-radius: 0.25rem;
+		  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+		  display: flex;
+		  flex-direction: column;
+		  overflow: hidden;
+                  width: 50%;
+		}
+		.card:hover .card__image {
+		  -webkit-filter: contrast(100%);
+				  filter: contrast(100%);
+		}
+		.card__content {
+		  display: flex;
+		  flex: 1 1 auto;
+		  flex-direction: column;
+		  padding: 1rem;
+		}
+		.card__image {
+		  background-position: center center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  border-top-left-radius: 0.25rem;
+		  border-top-right-radius: 0.25rem;
+		  -webkit-filter: contrast(70%);
+				  filter: contrast(70%);
+		  overflow: hidden;
+		  position: relative;
+		  transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+		}
+		.card__image::before {
+		  content: "";
+		  display: block;
+		  padding-top: 56.25%;
+		}
+		@media (min-width: 40rem) {
+		  .card__image::before {
+			padding-top: 66.6%;
+		  }
+		}
+		.card__image--findingdory {
+		  background-image: url("resources/images/sb3.jpg");
+		}
+		.card__image--upp {
+		  background-image: url("resources/images/g4.jpg");
+		}
+		.card__image--monsterinc {
+		  background-image: url("resources/images/sb4.jpg");
+		}
+		.card__image--birdss {
+		  background-image: url("resources/images/g2.jpg");
+		}
+		.card__image--frozen {
+		  background-image: url("resources/images/g8.jpg");
+		}
+		.card__image--walle {
+		  background-image: url("resources/images/3.jpg");
+		}
+		.card__title {
+		  color: #696969;
+		  font-size: 1.25rem;
+		  font-weight: 300;
+		  letter-spacing: 2px;
+		  text-transform: uppercase;
+		}
+		.card__text {
+		  flex: 1 1 auto;
+		  font-size: 0.875rem;
+		  line-height: 1.5;
+		  margin-bottom: 1.25rem;
+		}
+                div.Mycard h1{
+                    text-align: center;
+                    color: black;
+                }
+		
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid pb-5 titleStyle">
+            <!-- navigation bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark text-center row">
+                <!-- linked logo -->
+                <a class="navbar-brand col-sm-2 mx-auto" href="index.html"><img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo mx-auto" alt="logo that links to home page"></a>
+                <!-- Links to site's features -->
+                <div class="mx-auto container-fluid px-4 py-2 rounded contentStyle" id="navbarNav">
+                    <ul class="navbar-nav mx-auto container-fluid pr-0 row">
+                      <li class="nav-item col-sm">
+                        <a class="nav-link  text-dark" href="index.html">
+                            <img src="resources/images/icon_video.png" class="rounded nav-imgLinks zoom" alt="video icon that links to video section">
+                            <p class="navText m-0">videos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="gamePage.html">
+                            <img src="resources/images/icon_game.png" class="rounded nav-imgLinks zoom" alt="game icon that links to game page">
+                            <p class="navText m-0">games</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="aboutUsPage.html">
+                            <img src="resources/images/icon_aboutUs.png" class="rounded nav-imgLinks zoom" alt="about us icon that links to about us page">
+                            <p class="navText m-0">about us</p>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                
+                <div class="mx-auto col-sm-2 py-3">
+                </div>
+            </nav>
+
+            <!-- main section -->
+            <div>
+
+                <!-- cartoon menu -->
+                <div class="container-fluid cartoonMenu text-center contentStyle rounded">
+                    <div class="row p-3">
+                        <a class="col text-center zoom" href="cartoon1Page.html"><img src="resources/images/cartoon_img_1.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to sheepy the sheep cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon2Page.html"><img src="resources/images/cartoon_img_2.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the parrot adventure cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon3Page.html"><img src="resources/images/cartoon_img_3.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to apple friend cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon4Page.html"><img src="resources/images/cartoon_img_4.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the day trip cartoon page"></a>
+                    </div>
+                </div>
+                
+                <!-- content section -->
+                <div class="container-fluid  rounded my-3 text-center p-3 contentStyle">
+                 <div class="w3-panel w3-border w3-round">
+                        
+                    <div class= "second2">
+                        <h1 class="glow">The Adventure Parrot</h1>
+                        
+                    </div>
+                    
+                        
+                      
+                        <video width="950" height="500" controls>
+                            <source src="resources/video/BirdFlyingAnimation.mp4" type="video/mp4">
+                            Your browser does not support the <code>video</code> tag.
+                        </video>
+                        
+                        <div class="thirdbox">
+                            
+                                    <div class="typewriter">
+                                        <h1>Brief Description About The Cartoon.</h1>
+                                    </div>
+                        
+                                <div class="w3-panel w3-border w3-round-xxlarge">
+
+                                    <p>Hey there!! This cartoon is about the adventure of a parrot from a place to another place. The parrot will be experiencing and facing 
+                                        a freezing and snowy area at the end of its journey. Figure out what will happen to the parrot that adventuring from one location to 
+                                        another. Click and watch it. Have fun watching this adventurous journey of this parrot. </p>
+                                </div>
+                        </div>
+                     
+                    <div class="Mycard">
+		<h1><b>UPCOMING CARTOON MOVIES</b></h1>
+
+			<ul class="cards">
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--findingdory"></div>
+				  <div class="card__content">
+					<div class="card__title">FINDING DORY</div>
+					
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--upp"></div>
+				  <div class="card__content">
+					<div class="card__title">UP</div>
+					
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--monsterinc"></div>
+				  <div class="card__content">
+					<div class="card__title">MONSTER INC</div>
+					
+				   
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--birdss"></div>
+				  <div class="card__content">
+					<div class="card__title">THE BIRDS</div>
+					
+				  </div>
+				</div>
+			  </li>
+			   <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--frozen"></div>
+				  <div class="card__content">
+					<div class="card__title">FROZEN</div>
+					
+					
+				  </div>
+				</div>
+			  </li>
+			  <li class="cards__item">
+				<div class="card">
+				  <div class="card__image card__image--walle"></div>
+				  <div class="card__content">
+					<div class="card__title">WALL-E</div>
+					
+					
+				  </div>
+				</div>
+			  </li>
+			  
+			</ul>
+	    </div>
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                    <div id="ichizoku">
+                        <div class="ninja red">
+                          <div class="n--head">
+                            <div class="n--ribbon"></div>
+                            <div class="n--eyes"></div>
+                          </div>
+                          <div class="n--body">
+                            <div class="n--weapon"></div>
+                            <div class="n--arm"></div>
+                            <div class="n--arm"></div>
+
+                            <div class="n--leg"></div>
+                            <div class="n--leg"></div>
+                          </div> 
+                        </div>
+
+                        <div class="ninja blue">
+                          <div class="n--head">
+                            <div class="n--ribbon"></div>
+                            <div class="n--eyes"></div>
+                          </div>
+                          <div class="n--body">
+                            <div class="n--weapon"></div>
+                            <div class="n--arm"></div>
+                            <div class="n--arm"></div>
+
+                            <div class="n--leg"></div>
+                            <div class="n--leg"></div>
+                          </div> 
+                        </div>
+  
+                        <div class="ninja green">
+                          <div class="n--head">
+                            <div class="n--ribbon"></div>
+                            <div class="n--eyes"></div>
+                          </div>
+                          <div class="n--body">
+                            <div class="n--weapon"></div>
+                            <div class="n--arm"></div>
+                            <div class="n--arm"></div>
+
+                            <div class="n--leg"></div>
+                            <div class="n--leg"></div>
+                          </div>  
+                        </div>
+
+                        <div class="ninja yellow">
+                          <div class="n--head">
+                            <div class="n--ribbon"></div>
+                            <div class="n--eyes"></div>
+                          </div>
+                          <div class="n--body">
+                            <div class="n--weapon"></div>
+                            <div class="n--arm"></div>
+                            <div class="n--arm"></div>
+
+                            <div class="n--leg"></div>
+                            <div class="n--leg"></div>
+                          </div>  
+                        </div>
+                      </div>
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                 </div>
+                    
+                </div>
+                
+                          
+                         
+                        
+                                       
+            </div>
+         
+           
+
+            <!-- footer -->
+            <div class="container-fluid rounded text-center p-3 contentStyle">
+                <img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo" alt="static logo">
+                <p class="px-4 pt-3 m-0 text-center">Welcome, cartoon lovers! If you are looking for a reliable provider of cartoons online, you are on the right website
+                 where you can watch cartoons online for free. This website is the best place to watch your favorite cartoons online, 
+                whenever and wherever, on your demand.</p>
+            </div>
+        </div>
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script> 
+    </body>
+</html>

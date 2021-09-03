@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KinderKids - Keep Falling</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon2.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <style>
+        #game{
+        width: 500px;
+        height: 500px;
+        border: 8px solid gray;
+        margin: auto;
+        overflow: hidden;
+        background-color: white;
+        }
+        #character{
+            width: 30px;
+            height: 30px;
+            background-color: teal;
+            border-radius: 50%;
+            position: relative;
+            top: 400px;
+            left: 190px;
+            z-index: 1000000;
+        }
+        .block{
+            width: 500px;
+            height: 10px;
+            background-color: grey;
+            position: relative;
+            top: 100px;
+            margin-top: -10px;
+        }
+        .hole{
+            width: 40px;
+            height: 10px;
+            background-color: white;
+            position: relative;
+            margin-top: -10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid pb-5 titleStyle" style="background-color: #f7bbbb">
+            <!-- navigation bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark text-center row">
+                <!-- linked logo -->
+                <a class="navbar-brand col-sm-2 mx-auto" href="index.html"><img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo mx-auto" alt="logo that links to home page"></a>
+                <!-- Links to site's features -->
+                <div class="mx-auto container-fluid px-4 py-2 rounded contentStyle" id="navbarNav">
+                    <ul class="navbar-nav mx-auto container-fluid pr-0 row">
+                      <li class="nav-item col-sm">
+                        <a class="nav-link  text-dark" href="index.html">
+                            <img src="resources/images/icon_video.png" class="rounded nav-imgLinks zoom" alt="video icon that links to video section">
+                            <p class="navText m-0">videos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="gamePage.html">
+                            <img src="resources/images/icon_game.png" class="rounded nav-imgLinks zoom" alt="game icon that links to game page">
+                            <p class="navText m-0">games</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="aboutUsPage.html">
+                            <img src="resources/images/icon_aboutUs.png" class="rounded nav-imgLinks zoom" alt="about us icon that links to about us page">
+                            <p class="navText m-0">about us</p>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <!-- buttons to customize background page -->
+                <div class="mx-auto col-sm-2 py-3">
+                    <button class="btn btn-block btnTheme" id="themeDesert">Desert</button>
+                    <button class="btn btn-block btnTheme" id="themeSea">Sea</button>
+                    <button class="btn btn-block btnTheme" id="themeForest">Forest</button>
+                </div>
+            </nav>
+
+            <!-- main section -->
+            <div>
+
+                <!-- cartoon menu -->
+                <div class="container-fluid cartoonMenu text-center contentStyle rounded">
+                    <div class="row p-3">
+                        <a class="col text-center zoom" href="cartoon1Page.html"><img src="resources/images/cartoon_img_1.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to sheepy the sheep cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon2Page.html"><img src="resources/images/cartoon_img_2.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the parrot adventure cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon3Page.html"><img src="resources/images/cartoon_img_3.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to apple friend cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon4Page.html"><img src="resources/images/cartoon_img_4.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the day trip cartoon page"></a>
+                    </div>
+                </div>
+                
+                <!-- content section -->
+                <div  class="container-fluid rounded my-3 text-center px-3 pt-3" id="mainContentSect">
+                <div  class="container-md contentStyle rounded p-0">
+                    <h1 class="container-fluid text-center rounded text-light p-2 titleStyle">
+                            Game - Keep Falling
+                        </h1>
+                    <div id="game">
+                        <div id="character"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="container-fluid rounded text-center p-3 contentStyle">
+                <img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo" alt="static logo">
+                <p class="px-4 pt-3 m-0 text-center">Welcome, cartoon lovers! If you are looking for a reliable provider of cartoons online, you are on the right website
+                 where you can watch cartoons online for free. This website is the best place to watch your favorite cartoons online, 
+                whenever and wherever, on your demand.</p>
+            </div>
+        
+        </div>
+        <script>
+            //keep falling game
+            var character = document.getElementById("character");
+            var game = document.getElementById("game");
+            var interval;
+            var both = 0;
+            var counter = 0;
+            var currentBlocks = [];
+
+            function moveLeft(){
+                var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+                if(left>0){
+                    character.style.left = left - 1 + "px";
+                }
+            }
+            function moveRight(){
+                var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+                if(left<380){
+                    character.style.left = left + 1 + "px";
+                }
+            }
+            document.addEventListener("keydown", event => {
+                if(both==0){
+                    both++;
+                    if(event.key==="ArrowLeft"){
+                        interval = setInterval(moveLeft, 1);
+                    }
+                    if(event.key==="ArrowRight"){
+                        interval = setInterval(moveRight, 1);
+                    }
+                }
+            });
+            document.addEventListener("keyup", event => {
+                clearInterval(interval);
+                both=0;
+            });
+
+            var blocks = setInterval(function(){
+                var blockLast = document.getElementById("block"+(counter-1));
+                var holeLast = document.getElementById("hole"+(counter-1));
+                if(counter>0){
+                    var blockLastTop = parseInt(window.getComputedStyle(blockLast).getPropertyValue("top"));
+                    var holeLastTop = parseInt(window.getComputedStyle(holeLast).getPropertyValue("top"));
+                }
+                if(blockLastTop<400||counter==0){
+                    var block = document.createElement("div");
+                    var hole = document.createElement("div");
+                    block.setAttribute("class", "block");
+                    hole.setAttribute("class", "hole");
+                    block.setAttribute("id", "block"+counter);
+                    hole.setAttribute("id", "hole"+counter);
+                    block.style.top = blockLastTop + 100 + "px";
+                    hole.style.top = holeLastTop + 100 + "px";
+                    var random = Math.floor(Math.random() * 360);
+                    hole.style.left = random + "px";
+                    game.appendChild(block);
+                    game.appendChild(hole);
+                    currentBlocks.push(counter);
+                    counter++;
+                }
+                var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+                var drop = 0;
+                if(characterTop <= 0){
+                    alert("Game over. Score: "+(counter-9));
+                    clearInterval(blocks);
+                    location.reload();
+                }
+                for(var i = 0; i < currentBlocks.length;i++){
+                    let current = currentBlocks[i];
+                    let iblock = document.getElementById("block"+current);
+                    let ihole = document.getElementById("hole"+current);
+                    let iblockTop = parseFloat(window.getComputedStyle(iblock).getPropertyValue("top"));
+                    let iholeLeft = parseFloat(window.getComputedStyle(ihole).getPropertyValue("left"));
+                    iblock.style.top = iblockTop - 0.4 + "px";
+                    ihole.style.top = iblockTop - 0.4 + "px";
+                    if(iblockTop < -20){
+                        currentBlocks.shift();
+                        iblock.remove();
+                        ihole.remove();
+                    }
+                    if(iblockTop-20<characterTop && iblockTop>characterTop){
+                        drop++;
+                        if(iholeLeft<=characterLeft && iholeLeft+15>=characterLeft){
+                            drop = 0;
+                        }
+                    }
+                }
+                if(drop==0){
+                    if(characterTop < 460){
+                        character.style.top = characterTop + 2 + "px";
+                    }
+                }else{
+                    character.style.top = characterTop - 0.5 + "px";
+                }
+            },5);
+            
+            //theme buttons that changes the theme of the page
+            var mainContent = document.getElementById("mainContentSect");
+            var mainBody = document.getElementsByClassName("contentStyle");
+            var titleStyle = document.getElementsByClassName("titleStyle");
+            
+            document.getElementById("themeDesert").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image3_fire.png)";
+                changeMainBodyStyle("#f7f7ba");
+                changeTitleStyle("#a0522d");
+            });
+            
+            document.getElementById("themeSea").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_sea.png)";
+                changeMainBodyStyle("#f8f8ff");
+                changeTitleStyle("#3db2c2");
+            });
+            
+            document.getElementById("themeForest").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_forest.png)";
+                changeMainBodyStyle("#d6ebad");
+                changeTitleStyle("#6b8e23");
+            });
+            
+            function changeMainBodyStyle(bgColor) {
+                for (let i = 0; i < mainBody.length; i++){
+                    mainBody[i].style.backgroundColor = bgColor;
+                }
+            }
+            
+            function changeTitleStyle(bgColor) {
+                for (let i = 0; i < titleStyle.length; i++) {
+                    titleStyle[i].style.backgroundColor = bgColor;
+                }
+            }
+        </script>   
+    </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KinderKids - about us</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon2.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        
+ 
+
+
+
+        
+        <style>
+            <!-- insert your styling here -->
+            
+        
+
+          .active, .collapsible:hover {
+            background-color: #555555;
+          }
+
+          .collapsible:after {
+            content: '\002B';
+            color: black;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            
+          }
+
+          .active:after {
+            content: "\2212";
+          }
+
+          .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            text-align: center;
+          
+          }
+
+           .w3-panel{
+               padding-bottom: 20px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid pb-5 titleStyle" style="background-color: #f7bbbb">
+            <!-- navigation bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark text-center row">
+                <!-- linked logo -->
+                <a class="navbar-brand col-sm-2 mx-auto" href="index.html"><img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo mx-auto" alt="logo that links to home page"></a>
+                <!-- Links to site's features -->
+                <div class="mx-auto container-fluid px-4 py-2 rounded contentStyle" id="navbarNav">
+                    <ul class="navbar-nav mx-auto container-fluid pr-0 row">
+                      <li class="nav-item col-sm">
+                        <a class="nav-link  text-dark" href="index.html">
+                            <img src="resources/images/icon_video.png" class="rounded nav-imgLinks zoom" alt="video icon that links to video section">
+                            <p class="navText m-0">videos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="gamePage.html">
+                            <img src="resources/images/icon_game.png" class="rounded nav-imgLinks zoom" alt="game icon that links to game page">
+                            <p class="navText m-0">games</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="aboutUsPage.html">
+                            <img src="resources/images/icon_aboutUs.png" class="rounded nav-imgLinks zoom" alt="about us icon that links to about us page">
+                            <p class="navText m-0">about us</p>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <!-- buttons to customize background page -->
+                <div class="mx-auto col-sm-2 py-3">
+                    <button class="btn btn-block btnTheme" id="themeDesert">Desert</button>
+                    <button class="btn btn-block btnTheme" id="themeSea">Sea</button>
+                    <button class="btn btn-block btnTheme" id="themeForest">Forest</button>
+                </div>
+            </nav>
+
+            <!-- main section -->
+            <div>
+
+                <!-- cartoon menu -->
+                <div class="container-fluid cartoonMenu text-center contentStyle rounded">
+                    <div class="row p-3">
+                        <a class="col text-center zoom" href="cartoon1Page.html"><img src="resources/images/cartoon_img_1.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to sheepy the sheep cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon2Page.html"><img src="resources/images/cartoon_img_2.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the parrot adventure cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon3Page.html"><img src="resources/images/cartoon_img_3.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to apple friend cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon4Page.html"><img src="resources/images/cartoon_img_4.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the day trip cartoon page"></a>
+                    </div>
+                </div>
+                
+                <!-- content section -->
+                <div  class="container-fluid rounded my-3 text-center px-3 pt-3" id="mainContentSect">
+                <div class="container-fluid rounded my-3 text-center p-3 contentStyle">
+                    <div class="w3-panel w3-border w3-round">
+
+                    <div class= "abts text-center p-5">
+                        <h2>About Us</h2>
+                        <p>Our group strengths are the presence of efficient teamwork and professional communication throughout members. Tasks have been allocated evenly and properly based on set of skills possessed by individual team members. Further details on task allocation as below.</p>
+                    </div> 
+                    <button class="collapsible container-sm p-4 rounded-top">Derrick</button>
+                        <div class="content container-sm">
+                          <p>A user interface designer, a graphic designer that designs the cartoons animation and a programmer for this website pages.</p>
+                        </div>
+                    <button class="collapsible container-sm p-4 rounded-top">Jazli</button>
+                        <div class="content container-sm">
+                          <p>A user interface designer for the website layout and a programmer for this website pages.</p>
+                        </div>
+                    <button class="collapsible container-sm p-4 rounded-top">Ricky</button>
+                        <div class="content container-sm">
+                          <p>A user interface designer, a graphic designer that designs the cartoons animation and a programmer for this website pages</p>
+                        </div>
+
+                    <button class="collapsible container-sm p-4 rounded-top">Thamesh</button>
+                        <div class="content container-sm">
+                          <p>A graphic designer for designing the cartoon animation, a game developer and a programmer for this website pages.</p>
+                        </div>
+                  </div> 
+
+                </div>
+                </div>
+            
+
+            <!-- footer -->
+            <div class="container-fluid rounded text-center p-3 contentStyle">
+                <img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo" alt="static logo">
+                <p class="px-4 pt-3 m-0 text-center">Welcome, cartoon lovers! If you are looking for a reliable provider of cartoons online, you are on the right website
+                 where you can watch cartoons online for free. This website is the best place to watch your favorite cartoons online, 
+                whenever and wherever, on your demand.</p>
+            </div>
+        
+        </div>
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script> 
+        <script>
+            
+            //accordion
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            
+            //theme button
+            var mainContent = document.getElementById("mainContentSect");
+            var mainBody = document.getElementsByClassName("contentStyle");
+            var titleStyle = document.getElementsByClassName("titleStyle");
+            
+            document.getElementById("themeDesert").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image3_fire.png)";
+                changeMainBodyStyle("#f7f7ba");
+                changeTitleStyle("#a0522d");
+            });
+            
+            document.getElementById("themeSea").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_sea.png)";
+                changeMainBodyStyle("#f8f8ff");
+                changeTitleStyle("#3db2c2");
+            });
+            
+            document.getElementById("themeForest").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_forest.png)";
+                changeMainBodyStyle("#d6ebad");
+                changeTitleStyle("#6b8e23");
+            });
+            
+            function changeMainBodyStyle(bgColor) {
+                for (let i = 0; i < mainBody.length; i++){
+                    mainBody[i].style.backgroundColor = bgColor;
+                }
+            }
+            
+            function changeTitleStyle(bgColor) {
+                for (let i = 0; i < titleStyle.length; i++) {
+                    titleStyle[i].style.backgroundColor = bgColor;
+                }
+            }
+        </script>
+    </body>
+</html>

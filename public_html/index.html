@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KinderKids</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon2.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        
+        <!-- external stylesheet -->
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <style>
+            <!-- insert your styling here -->
+            .linkedImagesSect {
+                height: 700px;
+            }
+            .flexItem1 {
+                flex-basis: 1300px;
+            }
+            .flex-row {
+                height: 50%;
+            }
+            .coverImage {
+                object-fit: cover;
+                width: 100%;
+                height: 85%;
+            }
+            .itemTitle {
+                height: 15%;
+                font-size: 40px;
+                text-decoration: none;
+            }
+            
+            .linkedImg, .linkedImg > a:hover {
+                position: relative;
+                text-decoration: none;
+            }
+            .smallCoverImage {
+                height: 75%;
+            }
+            .smallLinkedImg p{
+                height: 25%;
+                font-size: 30px;
+            }
+            .iconOverImage {
+                position: absolute;
+                top: -50%;
+                right: 5%;
+                width: 20%;
+                height: auto;
+            }
+            .imgShake:hover {
+              /* Start the shake animation and make the animation last for 0.5 seconds */
+              animation: shake 1s;
+
+              /* When the animation is finished, start again */
+              animation-iteration-count: infinite;
+            }
+
+            @keyframes shake {
+              0% { transform: translate(1px, 1px) rotate(0deg); }
+              10% { transform: translate(-1px, -2px) rotate(-1deg); }
+              20% { transform: translate(-3px, 0px) rotate(1deg); }
+              30% { transform: translate(3px, 2px) rotate(0deg); }
+              40% { transform: translate(1px, -1px) rotate(1deg); }
+              50% { transform: translate(-1px, 2px) rotate(-1deg); }
+              60% { transform: translate(-3px, 1px) rotate(0deg); }
+              70% { transform: translate(3px, 1px) rotate(-1deg); }
+              80% { transform: translate(-1px, -1px) rotate(1deg); }
+              90% { transform: translate(1px, 2px) rotate(0deg); }
+              100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+            
+       
+            @media screen and (max-width: 575px) {
+                .linkedImagesSect {
+                    height: 500px;
+                }
+                .itemTitle {
+                    font-size: 15px;
+                }
+                .smallLinkedImg p {
+                    font-size: 12px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid pb-5 titleStyle" style="background-color: #f7bbbb">
+            <!-- navigation bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark text-center row">
+                <!-- linked logo -->
+                <a class="navbar-brand col-sm-2 mx-auto" href="index.html"><img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo mx-auto" alt="logo that links to home page"></a>
+                <!-- Links to site's features -->
+                <div class="mx-auto container-fluid px-4 py-2 rounded contentStyle" id="navbarNav">
+                    <ul class="navbar-nav mx-auto container-fluid pr-0 row">
+                      <li class="nav-item col-sm">
+                        <a class="nav-link text-dark" href="#imgLinksToCartoonGame">
+                            <img src="resources/images/icon_video.png" class="rounded nav-imgLinks zoom" alt="video icon that links to video section">
+                            <p class="navText m-0">videos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="gamePage.html">
+                            <img src="resources/images/icon_game.png" class="rounded nav-imgLinks zoom" alt="game icon that links to game page">
+                            <p class="navText m-0">games</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="aboutUsPage.html">
+                            <img src="resources/images/icon_aboutUs.png" class="rounded nav-imgLinks zoom" alt="about us icon that links to about us page">
+                            <p class="navText m-0">about us</p>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                <!-- buttons to customize background page -->
+                <div class="mx-auto col-sm-2 py-3">
+                    <button class="btn btn-block btnTheme" id="themeDesert">Desert</button>
+                    <button class="btn btn-block btnTheme" id="themeSea">Sea</button>
+                    <button class="btn btn-block btnTheme" id="themeForest">Forest</button>
+                </div>
+            </nav>
+
+            <!-- main section -->
+            <div>
+                
+                <!-- pop up message -->
+                <div class="modal" tabindex="-1" role="dialog" id="popUpMessage">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content text-center">
+                            <div class="modal-header titleStyle">
+                                <h5 class="modal-title">HELLO EVERYONE!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body contentStyle">
+                                <h2 class="text-secondary font-weight-bold">Welcome to KinderKids!</h2>
+                                <p>This website comprises of cartoon videos and games for your entertainment!</p>
+                                <p>If you are aged 2 to 6 years old, then this is the best site for you!</p>
+                                <p>Have a great time!</p>
+                            </div>
+                            <div class="modal-footer contentStyle">
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Let's go!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- cartoon menu -->
+                <div class="container-fluid cartoonMenu text-center contentStyle rounded">
+                    <div class="row p-3">
+                        <a class="col text-center zoom" href="cartoon1Page.html"><img src="resources/images/cartoon_img_1.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to sheepy the sheep cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon2Page.html"><img src="resources/images/cartoon_img_2.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the parrot adventure cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon3Page.html"><img src="resources/images/cartoon_img_3.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to apple friend cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon4Page.html"><img src="resources/images/cartoon_img_4.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the day trip cartoon page"></a>
+                    </div>
+                </div>
+                
+                <!-- content section -->
+                <div class="container-fluid rounded my-3 text-center px-3 pt-3" id="mainContentSect">
+                    
+                    <!-- introductory video section -->
+                    <div class="container-md contentStyle rounded p-0">
+                        <h1 class="container-fluid text-center rounded text-light p-2 titleStyle">
+                            Introduction
+                        </h1>
+                        <div class="p-md-5">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <video class="embed-responsive-item" controls>
+                                    <source src="resources/video/intro.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- links to cartoons and game -->
+                    <div class="container-md rounded p-0 mt-3 d-flex flex-column linkedImagesSect" id="imgLinksToCartoonGame">
+                        <div class="d-flex flex-row">
+                            <div class="flexItem1 p-2 imgShake linkedImg">
+                                <a href="cartoon1Page.html" class="">
+                                    <img src="resources/images/cartoon_img_1.png" class="coverImage rounded" alt="cartoon thumbnail that links to sheepy the sheep cartoon page">
+                                    <p class="bg-light text-dark p-2 p-md-3 rounded-bottom itemTitle linkedImg">
+                                        Jackie The Sheepy
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="p-2 h-50 imgShake linkedImg smallLinkedImg">
+                                    <a href="cartoon2Page.html" class="">
+                                        <img src="resources/images/cartoon_img_2.png" class="coverImage smallCoverImage rounded" alt="cartoon thumbnail that links to the parrot adventure cartoon page">
+                                        <p class="bg-light text-dark p-2 p-md-3 rounded-bottom itemTitle linkedImg">
+                                            The Parrot Adventure
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="p-2 h-50 imgShake linkedImg smallLinkedImg">
+                                    <a href="cartoon3Page.html" class="">
+                                        <img src="resources/images/cartoon_img_3.png" class="coverImage smallCoverImage rounded" alt="cartoon thumbnail that links to apple friend cartoon page">
+                                        <p class="bg-light text-dark p-2 p-md-3 rounded-bottom itemTitle">Apple Friend</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="p-2 imgShake linkedImg">
+                                <a href="cartoon4Page.html">
+                                    <img src="resources/images/cartoon_img_4.png" class="coverImage rounded" alt="cartoon thumbnail that links to the day trip cartoon page">
+                                    <p class="bg-light text-dark p-2 p-md-3 rounded-bottom itemTitle">The Day Trip</p>
+                                </a>
+                            </div>
+                            <div class="flexItem1 p-2 imgShake linkedImg">
+                                <a href="gamePage.html">
+                                    <img src="resources/images/game_img.png" class="coverImage rounded" alt="game thumbnail that links to keep falling game page">
+                                    <p class="bg-light text-dark p-2 p-md-3 rounded-bottom itemTitle">Keep Falling</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <!-- footer -->
+            <div class="container-fluid contentStyle rounded text-center p-3">
+                <img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo" alt="static logo">
+                <p class="px-4 pt-3 m-0 text-center">Welcome, cartoon lovers! If you are looking for a reliable provider of cartoons online, you are on the right website
+                 where you can watch cartoons online for free. This website is the best place to watch your favorite cartoons online, 
+                whenever and wherever, on your demand.</p>
+            </div>
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script> 
+        <script>
+            //load pop up message
+            $(window).load(function()
+            {
+                $('#popUpMessage').modal('show');
+            });
+            
+            //change page theme on click on theme buttons
+            var mainContent = document.getElementById("mainContentSect");
+            var mainBody = document.getElementsByClassName("contentStyle");
+            var titleStyle = document.getElementsByClassName("titleStyle");
+            
+            document.getElementById("themeDesert").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image3_fire.png)";
+                changeMainBodyStyle("#f7f7ba");
+                changeTitleStyle("#a0522d");
+            });
+            
+            document.getElementById("themeSea").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_sea.png)";
+                changeMainBodyStyle("#f8f8ff");
+                changeTitleStyle("#3db2c2");
+            });
+            
+            document.getElementById("themeForest").addEventListener("click", function(){
+                mainContent.style.backgroundImage = "url(resources/images/bg_image_forest.png)";
+                changeMainBodyStyle("#d6ebad");
+                changeTitleStyle("#6b8e23");
+            });
+            
+            function changeMainBodyStyle(bgColor) {
+                for (let i = 0; i < mainBody.length; i++){
+                    mainBody[i].style.backgroundColor = bgColor;
+                }
+            }
+            
+            function changeTitleStyle(bgColor) {
+                for (let i = 0; i < titleStyle.length; i++) {
+                    titleStyle[i].style.backgroundColor = bgColor;
+                }
+            }
+        </script>
+    </body>
+</html>

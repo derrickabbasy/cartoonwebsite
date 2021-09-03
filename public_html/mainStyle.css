@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09-Dec-2020, 14:02:26
+    Author     : Ricky Thain
+*/
+
+.nav-imgLinks {
+    max-width: 60px;
+}
+.nav-logo {
+    max-width: 130px;
+}
+.navStyle {
+    background-color: #f08080;
+}
+.menu-imgLinks {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.titleStyle {
+    background-color: #f7bbbb;
+}
+.contentStyle {
+    background-color: #fff280;
+}
+#themeDesert {
+    background-color: #e6a644;
+}
+#themeDesert:hover {
+    background-color: #e18339;
+    color: #ffffff;
+}
+#themeSea {
+    background-color: #a6dccf;
+}
+#themeSea:hover {
+    background-color: #0ea7b5;
+    color: #ffffff;
+}
+#themeForest {
+    background-color: #dfef89;
+}
+#themeForest:hover {
+    background-color: #8ea253;
+    color: #ffffff;
+}
+#mainContentSect {
+    padding-bottom: 500px;
+    background-image: url("resources/images/bg_image_default.png");
+    background-position: bottom;
+    background-size: cover;
+}
+.zoom {
+    transition: transform .2s;
+}
+.zoom:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 575px) {
+    .nav-item {
+        display: block;
+    }
+    .logoText {
+        font-size: 30px;
+    }
+    .navText {
+        display: inline-block;
+        font-size: 30px;
+        width: 150px;
+    }
+    .btnTheme {
+        display: inline-block;
+        width: 32%;
+        vertical-align: middle;
+        margin-top: .5rem;
+    }
+    .cartoonMenu > .row {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .cartoonMenu > .row > .col {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+    }
+    #mainContentSect {
+        padding-bottom: 200px;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KinderKids - Apple Friend</title>
+        <link rel="icon" type="image/x-icon" href="resources/images/favicon2.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="mainStyle.css">
+        <style>
+            #mainContentSect {
+                padding-bottom: 500px;
+                background-image: url("resources/images/bg_image_apple.png");
+                background-position: bottom;
+                background-size: cover;
+            }
+            .cartoonTitleStyle {
+                background-color: #e12f2f;
+            }
+            #cartoonDescription {
+                position: relative;
+            }
+            .absoluteImage {
+                width: 30%;
+                position: absolute;
+                bottom: -100%;
+                right: 0;
+            }
+            .imgShake:hover {
+              /* Start the shake animation and make the animation last for 0.5 seconds */
+              animation: shake 1s;
+
+              /* When the animation is finished, start again */
+              animation-iteration-count: infinite;
+            }
+
+            @keyframes shake {
+              0% { transform: translate(1px, 1px) rotate(0deg); }
+              10% { transform: translate(-1px, -2px) rotate(-1deg); }
+              20% { transform: translate(-3px, 0px) rotate(1deg); }
+              30% { transform: translate(3px, 2px) rotate(0deg); }
+              40% { transform: translate(1px, -1px) rotate(1deg); }
+              50% { transform: translate(-1px, 2px) rotate(-1deg); }
+              60% { transform: translate(-3px, 1px) rotate(0deg); }
+              70% { transform: translate(3px, 1px) rotate(-1deg); }
+              80% { transform: translate(-1px, -1px) rotate(1deg); }
+              90% { transform: translate(1px, 2px) rotate(0deg); }
+              100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+            @media screen and (max-width: 575px) {
+                #mainContentSect {
+                    padding-bottom: 200px;
+                }
+                .absoluteImage {
+                    bottom: -30%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid pb-5 titleStyle">
+            <!-- navigation bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark text-center row">
+                <!-- linked logo -->
+                <a class="navbar-brand col-sm-2 mx-auto" href="index.html"><img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo mx-auto" alt="logo that links to home page"></a>
+                <!-- Links to site's features -->
+                <div class="mx-auto container-fluid px-4 py-2 rounded contentStyle" id="navbarNav">
+                    <ul class="navbar-nav mx-auto container-fluid pr-0 row">
+                      <li class="nav-item col-sm">
+                        <a class="nav-link  text-dark" href="index.html">
+                            <img src="resources/images/icon_video.png" class="rounded nav-imgLinks zoom" alt="video icon that links to video section">
+                            <p class="navText m-0">videos</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="gamePage.html">
+                            <img src="resources/images/icon_game.png" class="rounded nav-imgLinks zoom" alt="game icon that links to game page">
+                            <p class="navText m-0">games</p>
+                        </a>
+                      </li>
+                      <li class="nav-item col">
+                        <a class="nav-link text-dark" href="aboutUsPage.html">
+                            <img src="resources/images/icon_aboutUs.png" class="rounded nav-imgLinks zoom" alt="about us icon that links to about us page">
+                            <p class="navText m-0">about us</p>
+                        </a>
+                      </li>
+                    </ul>
+                </div>
+                
+                <div class="mx-auto col-sm-2 py-3">
+                </div>
+            </nav>
+
+            <!-- main section -->
+            <div>
+
+                <!-- cartoon menu -->
+                <div class="container-fluid cartoonMenu text-center contentStyle rounded">
+                    <div class="row p-3">
+                        <a class="col text-center zoom" href="cartoon1Page.html"><img src="resources/images/cartoon_img_1.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to sheepy the sheep cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon2Page.html"><img src="resources/images/cartoon_img_2.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the parrot adventure cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon3Page.html"><img src="resources/images/cartoon_img_3.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to apple friend cartoon page"></a>
+                        <a class="col text-center zoom" href="cartoon4Page.html"><img src="resources/images/cartoon_img_4.png" class="rounded-circle menu-imgLinks" alt="cartoon icon that links to the day trip cartoon page"></a>
+                    </div>
+                </div>
+                
+                <!-- content section -->
+                <div class="container-fluid rounded my-3 text-center pt-3 px-3 bg-light" id="mainContentSect">
+                    <div class="container-md contentStyle rounded p-0">
+                        <h1 class="container-fluid text-center rounded text-light p-2 cartoonTitleStyle ">
+                            Apple Friend
+                        </h1>
+                        <div class="p-md-5 ">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <video class="embed-responsive-item" controls>
+                                    <source src="resources/video/cartoon_appleFriend_2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 pt-2 text-left" id="cartoonDescription">
+                            <h5>Meet our friend, apple and get ready for an adventurous time all day every day!</h5>
+                            <img src="resources/images/vector_apples.png" class="absoluteImage imgShake" alt="image of 2 cartoon apples">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="container-fluid rounded text-center p-3 contentStyle">
+                <img src="resources/images/KinderKidsLogo.png" class="rounded nav-logo" alt="static logo">
+                <p class="px-4 pt-3 m-0 text-center">Welcome, cartoon lovers! If you are looking for a reliable provider of cartoons online, you are on the right website
+                 where you can watch cartoons online for free. This website is the best place to watch your favorite cartoons online, 
+                whenever and wherever, on your demand.</p>
+            </div>
+        
+        </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script> 
+    </body>
+</html>
